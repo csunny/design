@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block sm_screen %}
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <!--<li><a href="#image">最新图片</a></li>-->
+            <!--<li><a href="#app">图片上传</a></li>-->
+            <!--<li><a href="#contact">联系我们</a></li>-->
+        </ul>
+    </div>
+{% endblock %}
+
+{% block detail_section %}
+
+<!--home-->
+<section id="home">
+    <div class="lvjing">
+        <div class="container">
+            <div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h1>让美的价值在你我之间传递！</h1>
+                    <p>
+                        须知：图片可以被点赞、下载。<br/>
+                        如果你认为图片漂亮，可以点赞、或者下载。 当然，为了充分体现美的价值，下载过程中作者可以获得相应的报酬。
+                        整个过程通过智能合约来执行，以上动作可以触发合约自动执行，作者可以获得价值不等的数字币。
+                    </p>
+
+                    <img src="/static/upload/middle/{{image_info.image_name}}" class="img-responsive" alt="php"/>
+                    <div id="content-sec3-adjust" style="position: absolute;">
+                        <p class="hide" id="hide_name"> {{image_info.name}}</p>
+                        <p class="hide" id="hide_image">{{image_info.image}}</p>
+                        <button class="btn btn-primary" disabled >
+                            <span class="glyphicon glyphicon-heart" id="count"> {{ image_info.love_count }} </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div>
+                    <button class="btn btn-primary" id="love">
+                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                        点赞
+                    </button>
+                    <button class="btn btn-primary" id="download">
+                        <span class="glyphicon glyphicon-download-alt"></span>
+                        下载
+                    </button>
+                    <a href="" class="hide" id="image_address">{{image_info.image_name}}</a>
+                </div>
+
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--home-->
+{% endblock %}
+
+{% block custom_js %}
+<script src="{% static 'js/canvas-to-blob.min.js' %}"></script>
+<script src="{% static 'js/plupload.full.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.colorpickersliders.min.js' %}"></script>
+<script src="{% static 'js/upload.js' %}"></script>
+{% endblock %}
+

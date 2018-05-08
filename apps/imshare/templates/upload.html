@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap-slider.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.colorpickersliders.min.css' %}"/>
+{% endblock %}
+
+{% block sm_screen %}
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#image">最新图片</a></li>
+            <li><a href="#app">图片上传</a></li>
+            <li><a href="#bbs">使用说明</a></li>
+            <li><a href="#contact">联系我们</a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block image_section %}
+
+<!--course-->
+<section id="image">
+    <div class="container">
+        <div class="row wow fadeIn" data-wow-delay="0.6s">
+
+            <div class="noExtension hide" id="noExtension">
+                <h3>NOTE: Please install <a target="_blank" href="https://github.com/ChengOrangeJu/WebExtensionWallet">WebExtensionWallet</a>  to use SUPER DICTIONARY</h3>
+            </div>
+
+            <div class="col-md-12">
+                <h2>最新图片</h2>
+            </div>
+            {% for img in images %}
+            <div class="col-md-3">
+                <div class="image">
+                    <img src="/static/upload/small/{{img.image_name}}" class="img-responsive" alt=""/>
+                    <button class="btn btn-primary" disabled>
+                        <span class="glyphicon glyphicon-heart" style="width: 10px; margin-left: 0"> {{ img.love_count }} </span>
+                    </button>
+                    <a href="/imshare/detail?image_name={{img.image_name}}" class="btn btn-primary" target="_blank" role="button">
+                        查看详情
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!--course-->
+{% endblock %}
+
+{% block upload_section %}
+<section id="app">
+    <div class="container">
+            <div class="col-md-6">
+                <h2>图片上传</h2>
+                <p>图片上传， 让更美的设计更有价值！</p>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#choose_file">
+                    <span class="glyphicon glyphicon-certificate"></span>
+                    选择文件
+                </button>
+            </div>
+            <div class="col-md-6">
+                <img src="/static/{{ IMAGE_URL }}" class="img-responsive" id='test_img' alt=""/>
+            </div>
+    </div>
+
+</section>
+{% endblock %}
+
+{% block modal %}
+<div class="modal fade" id="choose_file" tabindex="-1" aria-labelledby="chose_fileLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">上传信息</h4>
+            </div>
+            <div class="modal-body">
+                图片名称: <input name="name" id="name" style="width: 300px;"/>
+
+                <div id="uploader" style="margin-top: 20px;">
+                    <a id="selectfiles" class='btn btn-primary'>选择文件</a>
+                </div>
+                <div id="ossfile">你的浏览器不支持flash,Silverlight或者HTML5!</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="commit">提交</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+{% endblock %}
+
+{% block explain %}
+<section id="bbs">
+    <div class="container">
+        <div class="row wow fadeInUp" data-wow-duration="0.5s">
+            <div class="col-md-4">
+                <a href="#" target="_blank">
+                    <img src="/static/img/nebulas.png" class="img-responsive" alt=""/>
+                    <h3>插件安装</h3>
+                    <p>安装星云链chrome插件钱包。</p>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" target="_blank">
+                    <img src="/static/img/wallet.png" class="img-responsive" alt=""/>
+                    <h3>钱包创建</h3>
+                    <p>通过chrome插件创建自己的钱包。</p>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" target="_blank">
+                    <img src="/static/img/upload.png" class="img-responsive" alt=""/>
+                    <h3>上传图片</h3>
+                    <p>点击上传图片按钮上传自己的图片。</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block custom_js %}
+<script src="{% static 'js/canvas-to-blob.min.js' %}"></script>
+<script src="{% static 'js/bootstrap-slider.min.js' %}"></script>
+<script src="{% static 'js/plupload.full.min.js' %}"></script>
+<script src="{% static 'js/tinycolor-min.js'%}"></script>
+<script src="{% static 'js/bootstrap.colorpickersliders.min.js' %}"></script>
+<script src="{% static 'js/upload.js' %}"></script>
+{% endblock %}
+
