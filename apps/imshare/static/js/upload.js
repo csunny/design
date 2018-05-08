@@ -21,6 +21,8 @@ $(function(){
     });
 });
 
+var WebDomain = "http://www.magicloud.com"
+
 var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
 var nebPay = new NebPay();
 var dappAddress = "n1tzoWc2XW1Xmt1qXEz8DGT32vAKwkb39kG";    // 智能合约的地址   hash="cef32b5099f9ccd2cddf06bee2b24972a57168a9db71c5a1b535a5146bceb68a"
@@ -37,7 +39,7 @@ var uploader = new plupload.Uploader({
         ],
 
     },
-    url: 'http://www.magicloud.com/imshare/upload',
+    url: WebDomain + '/imshare/upload',
 
     // flash settings
     flash_swf_url: "{% static 'js/Moxie.swf' %}",
@@ -151,7 +153,7 @@ function save_image(resp){
             console.log(result)
         }
     })
-    window.location.replace("http://www.magicloud.com")
+    window.location.replace(WebDomain)
 }
 
 // 点赞
@@ -201,7 +203,7 @@ function getImage(resp){
 
     var address = $('#hide_image')[0].innerHTML;
     console.log(address);
-    $('#image_address')[0].href = "http://www.magicloud.com/" + address
+    $('#image_address')[0].href = WebDomain + "/" + address
 }
 
 // commit user commit information
