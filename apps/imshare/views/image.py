@@ -88,7 +88,7 @@ def query(request):
 
     image = ImageModel.objects.get(name=name.strip())
 
-    res = requests.post(url=settings.NAS_TEST_NET, data=json.dumps({
+    res = requests.post(url=settings.NAS_MAIN_NET, data=json.dumps({
         "hash": image.tx_hash
     }))
 

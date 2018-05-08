@@ -25,7 +25,8 @@ var WebDomain = "http://www.magicloud.com"
 
 var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
 var nebPay = new NebPay();
-var dappAddress = "n1tzoWc2XW1Xmt1qXEz8DGT32vAKwkb39kG";    // 智能合约的地址   hash="cef32b5099f9ccd2cddf06bee2b24972a57168a9db71c5a1b535a5146bceb68a"
+//var dappAddress = "n1tzoWc2XW1Xmt1qXEz8DGT32vAKwkb39kG";    // 智能合约的地址 测试网络  hash="cef32b5099f9ccd2cddf06bee2b24972a57168a9db71c5a1b535a5146bceb68a"
+var dappAddress = "n1m1bgxfgzcuo3TERGzkEe9ohUywS1DwHmY"   // 智能合约地址 主网 hash 353b7067f1f4d0a08011a83e5ac436b523e5bea7707c0f21a00066b2445da6bd
 
 var uploader = new plupload.Uploader({
     runtimes: 'html5, html4, flash, silverlight',
