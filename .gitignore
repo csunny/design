@@ -1,15 +1,10 @@
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-*.pyc
 
 # C extensions
-
-# results data
-results/dest/
-results/raw/
+*.so
 
 # Distribution / packaging
 .Python
@@ -25,6 +20,7 @@ lib64/
 parts/
 sdist/
 var/
+wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -47,7 +43,7 @@ htmlcov/
 .cache
 nosetests.xml
 coverage.xml
-*,cover
+*.cover
 .hypothesis/
 
 # Translations
@@ -57,7 +53,6 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
-settings_local.py
 
 # Flask stuff:
 instance/
@@ -72,7 +67,7 @@ docs/_build/
 # PyBuilder
 target/
 
-# IPython Notebook
+# Jupyter Notebook
 .ipynb_checkpoints
 
 # pyenv
@@ -81,36 +76,30 @@ target/
 # celery beat schedule file
 celerybeat-schedule
 
+# SageMath parsed files
+*.sage.py
+
 # dotenv
 .env
 
 # virtualenv
+.venv
 venv/
 ENV/
 
 # Spyder project settings
 .spyderproject
+.spyproject
 
 # Rope project settings
 .ropeproject
 
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
 .idea
-
-# pydev project settings
-.project
-.pydevproject
-.settings
-
-# migrations
-
-migrations/
-
-# sqlite
 db.sqlite3
-
-node_modules/
-
-fuwo/static/css
-fuwo/static/js
-fuwo/static/img
-fuwo/static/font
+settings_local.py
+local_settings.py
