@@ -20,7 +20,7 @@ django_log = logging.getLogger("django")
 
 
 def list(request):
-    SITE_NAME = '美图库'
+    SITE_NAME = '迪扎网'
     images = ImageModel.objects.all()
 
     IMAGE_URL = "img/blockchain.jpg"

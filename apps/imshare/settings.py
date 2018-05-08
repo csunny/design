@@ -6,7 +6,7 @@ This Document is Created by  At 2018/5/6
 """
 from django.conf import settings
 
-DOMAIN_NAME = "www.magicloud.com"
+DOMAIN_NAME = "daydreamaker.cn"
 
 # error code information
 ERROR = {

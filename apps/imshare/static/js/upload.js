@@ -21,7 +21,7 @@ $(function(){
     });
 });
 
-var WebDomain = "http://www.magicloud.com"
+var WebDomain = "http://daydreamaker.cn/"
 
 var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
 var nebPay = new NebPay();
