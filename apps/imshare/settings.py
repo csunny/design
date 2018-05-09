@@ -6,7 +6,7 @@ This Document is Created by  At 2018/5/6
 """
 from django.conf import settings
 
-DOMAIN_NAME = "daydreamaker.com"
+DOMAIN_NAME = "daydreamaker.net"
 
 # error code information
 ERROR = {

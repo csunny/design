@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 's5i)xb+b(e-@k@y(ghdtsatgeb*@46@h585ln)4k4cpiv#&f31'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # Root path of the project
 DEPOSITORY_ROOT = os.path.normpath(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
@@ -47,7 +47,7 @@ sys.path.insert(1, LIB_PATH)
 # Version of project
 PROJECT_VERSION = "v1.0.0"
 
-ALLOWED_HOSTS = ['www.design.com', '0.0.0.0', '127.0.0.1', 'www.magicloud.com', 'daydreamaker.com']
+ALLOWED_HOSTS = ['daydreamaker.net', '0.0.0.0', '127.0.0.1', 'www.magicloud.com', 'daydreamaker.com']
 
 ADMINS = (
     "Magic Chen", 'cfqsunny@163.com'
