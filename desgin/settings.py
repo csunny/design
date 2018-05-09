@@ -47,7 +47,7 @@ sys.path.insert(1, LIB_PATH)
 # Version of project
 PROJECT_VERSION = "v1.0.0"
 
-ALLOWED_HOSTS = ['daydreamaker.net', '0.0.0.0', '127.0.0.1', 'www.magicloud.com', 'daydreamaker.com']
+ALLOWED_HOSTS = ['daydreamaker.net', '0.0.0.0', '127.0.0.1', 'www.dazadapp.io', 'www.magicloud.com', 'daydreamaker.com']
 
 ADMINS = (
     "Magic Chen", 'cfqsunny@163.com'

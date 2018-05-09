@@ -21,7 +21,7 @@ $(function(){
     });
 });
 
-var WebDomain = "http://daydreamaker.net"
+var WebDomain = "http://www.dazadapp.io"
 
 var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
 var nebPay = new NebPay();
